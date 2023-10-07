@@ -24,20 +24,20 @@ from Adafruit:
   RGBW LEDs](https://www.adafruit.com/product/2851).
 * **Thermal camera** which measures the temperature of objects using
   IR. The thermal camera is made by
-  [Melexis](https://www.adafruit.com/product/4469). It's great for
-  scanning hot alien devices.
+  [Melexis](https://www.adafruit.com/product/4469). _It's great for
+  scanning hot alien devices_.
 * **WIFI** scanner that uses the built in [WIFI circuitry](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/wifi-test) in the
-  ESP32-S3 to "smell" the air.
+  ESP32-S3 to _"smell" the air_.
 * **IR TV transmitter** uses the [RMT (remote control
   transceiver)](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/rmt.html)
-   built into the ESP32-S3 for controlling the TV using NEC codes. Or
-  to open alien doors.
+   built into the ESP32-S3 for controlling the TV using NEC codes. _Or
+  to open alien doors_.
 * **Sound** ESP32-S3 sends sound bytes to the [I2S 3W class D
   amplifer](https://www.adafruit.com/product/3006) for sound generation.
 * **Animal zapper** combines the ultrasonic range finder that transmits
   ultrasound at 42 kHz in free-run mode, the rainbox lights from
   the Neopixel Ring and the Ultrasonic Screwdriver sound to scare
-  animals or blow up Daleks :)
+  animals or _blow up Daleks_ :)
   
 The Ultrasonic Screwdriver can also be flcked or slid open to reveal the
 user screen and control buttons. 
