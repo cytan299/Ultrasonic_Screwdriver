@@ -8,7 +8,7 @@ Screwdriver. I made this screw driver that actually does actual, real
 measurements rather than simply a prop.
 
 ![Field
-DeRotator](https://github.com/cytan299/Ultrasonic_Screwdriver/main/pics/ultrasonic_screwdriver.jpg)
+DeRotator](https://https://github.com/cytan299/Ultrasonic_Screwdriver/tree/main/pics/ultrasonic_screwdirver.jpb)
 
 I my desing, the heart of the ultrasonic screwdriver is the [ESP32-S3 reverse TFT
 Feather[(https://www.adafruit.com/product/5691) made by Adafruit. The
