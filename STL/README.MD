@@ -10,8 +10,8 @@ CURA](https://ultimaker.com/software/ultimaker-cura/) for 3D printing.
 
 It is interesting that the best setting that I have found for the infill is
 zigzag and not cubic. I wanted a strong shell and so I had set the
-fill fraction to be 50%. You should check that zigzip and 50% fill
-works for you by examing the generated cross sections in the slicer program.
+fill fraction to be 50%. You should check that zigzag and 50% fill
+works for you by examining the generated cross sections in your slicer program.
 
 ## Copyright
 
