@@ -38,8 +38,8 @@ Ultrasonic Screwdriver contains are as follows:
   generation.
 * **Ultrasonic zapper** combines the ultrasonic range finder that
   transmits ultrasound at 42 kHz in free-run mode, the Neopixel Ring
-  flashing rainbow colours and sound to scare animals or _blow up
-  Daleks_ :)
+  flashing rainbow colours and the Ultrasound Screwdriver sound to
+  scare animals or _blow up Daleks_ :)
   
 Like many Dr Who sonic screwdrivers, the Ultrasonic Screwdriver can
 also be flicked or slid open to reveal the user screen and control
@@ -58,18 +58,18 @@ function as a screwdriver :)
 * **ultrasonic_screwdriver** contains the ESP32-S3 source code that is
   compiled by the [Arduino IDE](https://www.arduino.cc/en/software)
   and programmed  into the ESP32-S3.
-* **pics** photos used for describing this repository.
+* **pics** contains photos used for describing this repository.
 
 
 ## Support
 
-All the software have been successfully compiled Arduino IDE 2.2.1.
+All the software have been successfully compiled with Arduino IDE 2.2.1.
 
 This is unsupported software and hardware. Build at your own peril! :)
 
 You can submit questions or bug reports using the
-[issues](https://github.com/cytan299/Ultrasonic_Screwdriver/issues) tab on
-the right and then click on **New Issue**.
+[issues](https://github.com/cytan299/Ultrasonic_Screwdriver/issues) tab 
+and then clicking on **New Issue**.
 
 Have fun!
 
