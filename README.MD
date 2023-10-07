@@ -33,10 +33,16 @@ from Adafruit:
 * **Sound** ESP32-S3 sends sound bytes to the [I2S 3W class D
   amplifer](https://www.adafruit.com/product/3006) for sound generation.
 * **Animal zapper** combines he ultrasonic range finder that transmits
-  ultrasound at 42 kHz in free-run mode, the rainbox lights fro
+  ultrasound at 42 kHz in free-run mode, the rainbox lights from
   the Neopixel Ring and the Ultrasonic Screwdriver sound to scare
   animals or blow up Daleks :)
   
+The Ultimasonic Screwdriver can also be flcked or slid open to reveal the
+user screen and control buttons. 
+
+The only thing the Ultrasonic Screwdriver cannot do is that it is
+definitely **not** a screwdriver :)
+
 ## Copyright
 
 All the software, documentation, hardware designs that I have written is
