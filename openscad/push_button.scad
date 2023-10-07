@@ -27,7 +27,7 @@ $fn=100;
 
 screw_r = 2.5; // mm, radius of the screw
 //screw_len = 5.2976+1; // mm, length of the screw
-screw_len = 5.2976+25; // mm, length of the screw
+screw_len = 5.2976; // mm, length of the screw
 screw_pitch = 0.75; // pitch of the screw
 
 interface_r = 9.8/2; // mm, the interface between the plunger radius
@@ -71,11 +71,11 @@ module make_button()
    make_plunger();
  }
   
-/*
+
   translate([0, 7, 0]){
     make_button();
   }
-*/
+
 
 
 include <libscrew.scad>

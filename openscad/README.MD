@@ -1,6 +1,6 @@
 # OpenScad files
 
-These files generate all the STL files that is loaded into a gcode generation program like the  [Ultimaker CURA](https://ultimaker.com/software/ultimaker-cura/) for 3D printing.
+These [OpenScad](https://openscad.org/) files that generate all the STL files that are loaded into a gcode generation program like the  [Ultimaker CURA](https://ultimaker.com/software/ultimaker-cura/) for 3D printing.
 
 ## Files
 * **sonic_case.scad** The main file that generates nearly all parts of the Ultrasonic Screwdriver case.
