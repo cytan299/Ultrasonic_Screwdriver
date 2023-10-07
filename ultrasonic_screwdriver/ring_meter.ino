@@ -1,5 +1,5 @@
 // #########################################################################
-//  Draw the meter on the screen, returns x coord of righthand side
+// Draw the meter on the screen, returns x coord of righthand side
 // https://www.instructables.com/Arduino-analogue-ring-meter-on-colour-TFT-display/
 // Modified on 19 Aug 2023 for ultrasonic_screwdriver
 //
