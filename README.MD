@@ -9,13 +9,34 @@ measurements rather than simply a prop.
 
 ![Ultrasonic Scewdriver](https://github.com/cytan299/Ultrasonic_Screwdriver/blob/main//pics/ultrasonic_screwdriver.jpg)
 
-I my desing, the heart of the ultrasonic screwdriver is the [ESP32-S3 reverse TFT
+In my design, the heart of the ultrasonic screwdriver is the [ESP32-S3 reverse TFT
 Feather](https://www.adafruit.com/product/5691) made by Adafruit. The
 ESP32-S3 contains dual cores running at 240 MHz and it  has 4 MB Flash
-and 2 MB PSRAM of memory. Adafruit has added a colour 1.14 inch TFT
-with 240x130 pixels. 
-
-
+and 2 MB PSRAM of memory. Adafruit also added a colour 1.14 inch TFT
+with 240x130 pixels. This makes the ESP-32 reverse TFT the ideal
+microcontroller for the Ultrasonic Screwdriver.  The devices that the
+Ultrasonic Screwdriver contains are as follows which are all availalble
+from Adafruit:
+* **Ultrasonic** range finder which makes it possible for me to call
+  my screwdriver the Ultrasonic. The ultrasonic range finder is made
+  by [MaxBotix](https://www.adafruit.com/product/983).
+* **Torch** to light up the darkness. Torch uses the [Neopixel 12x5050
+  RGBW LEDs](https://www.adafruit.com/product/2851).
+* **Thermal camera** which measures the temperature of objects using
+  IR. The thermal camera is made by
+  [Melexis](https://www.adafruit.com/product/4469).
+* **WIFI** scanner that uses the built in WIFI circuitry in the
+  ESP32-S3.
+* **IR TV transmitter** uses the [RMT (remote control
+  transceiver)](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/rmt.html)
+   built into the ESP32-S3 for controlling the TV using NEC codes.
+* **Sound** ESP32-S3 sends sound bytes to the [I2S 3W class D
+  amplifer](https://www.adafruit.com/product/3006) for sound generation.
+* **Animal zapper** combines he ultrasonic range finder that transmits
+  ultrasound at 42 kHz in free-run mode, the rainbox lights fro
+  the Neopixel Ring and the Ultrasonic Screwdriver sound to scare
+  animals or blow up Daleks :)
+  
 ## Copyright
 
 All the software, documentation, hardware designs that I have written is
