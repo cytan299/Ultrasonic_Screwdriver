@@ -65,6 +65,11 @@ slicer programs like [Ultimaker CURA](https://ultimaker.com/software/ultimaker-c
 * **instructions** contains the build guide.	
 * **pics** contains photos used for describing this repository.
 
+## Movie
+
+A summary of the features of the Ultrasonic Screwdriver can be found
+on [youtube](https://youtu.be/zgtzh80xZCQ).
+
 
 ## Support
 
