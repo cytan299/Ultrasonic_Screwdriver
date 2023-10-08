@@ -17,7 +17,9 @@ works for you by examining the generated cross sections in your slicer program.
 
 All the software that I have written is copyright 2023 C.Y. Tan.
 
-All software is released under GPLv3
+All software is released under GPLv3.
+
+
 
 
 
