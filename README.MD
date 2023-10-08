@@ -58,6 +58,11 @@ slicer programs like [Ultimaker CURA](https://ultimaker.com/software/ultimaker-c
 * **ultrasonic_screwdriver** contains the ESP32-S3 source code that is
   compiled by the [Arduino IDE](https://www.arduino.cc/en/software)
   and programmed  into the ESP32-S3.
+* **signature** contains my unique signature written in
+  [Gallifreyan](https://shermansplanet.com/gallifreyan/guide.pdf).
+* **circuit** The Ultrasonic Screwdriver connection circuit drawn
+    with [Fritzing](https://fritzing.org/).
+* **instructions** contains the build guide.	
 * **pics** contains photos used for describing this repository.
 
 
