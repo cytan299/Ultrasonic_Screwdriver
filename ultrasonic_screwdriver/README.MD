@@ -15,6 +15,7 @@ controls
     * **Menu** system and user input.
 	* **TV** IR control
     * **Sound** of the Ultransonic Screwdriver.
+	
 From the user selection of the menu items, it send messages to the slave program. The
 tasks that the slave program executes are listed  below. 
 * **slave.ino** is the slave that listens to the master program and
@@ -25,12 +26,13 @@ tasks that the slave program executes are listed  below.
 	* **WIFI** scan and display
 	* **Battery status** display.
 	* **About** copyright and version display.
+	
 The following are the support programs used by both
 _ultrasonic_screwdriver.ino_ and _slave.ino_:
 * **IR_TX.cpp** and **IR_TX.hpp** are the IR transmitter class that
   utilizes the ESP32-S3 onboard RMT (remote control transceiver) to
-  produce NEC codes for TV control. The code here is for VIZIO TVs
-  other codes for your TV is easily found in this
+  produce NEC codes for TV control. The code here is for VIZIO TVs.
+  Other codes for your TV is easily found in this
   [database](https://github.com/probonopd/irdb/tree/master).
 * **audio.io** is the audio program that contains the Ultrasonic
   Screwdriver sound bytes that were created by me.
@@ -38,14 +40,15 @@ _ultrasonic_screwdriver.ino_ and _slave.ino_:
 The following are programs that have been copied from the web and are
 copyright by their respective authors. Here are the two programs that
 are used:
-* **ring_meter.ino** for displaying the ultransonic range finder
+* **ring_meter.ino** by Bodmer and is released under _CC BY-NC-SA 4.0
+  Deed_ license. It is used for displaying the ultransonic range finder
   results.
-* **wheel.ino** for displaying the rainbow colours on the NeoPixel
+* **wheel.ino** by Adafruit and is released under _LGPL-3.0_
+license. It is used for displaying the rainbow colours on the NeoPixel
   ring.
 
 ## Copyright
 
-All the software that I have written is
-copyright 2023 C.Y. Tan.
+All the software that I have written is copyright 2023 C.Y. Tan.
 
 All software is released under GPLv3.
