@@ -9,14 +9,14 @@ measurements rather than simply a prop.
 
 ![Ultrasonic Scewdriver](https://github.com/cytan299/Ultrasonic_Screwdriver/blob/main//pics/ultrasonic_screwdriver.jpg)
 
-In my design, the heart of the Ultrasonic Screwdriver is the [ESP32-S3 reverse TFT
-Feather](https://www.adafruit.com/product/5691) made by Adafruit. The
-ESP32-S3 contains dual cores running at 240 MHz with 4 MB Flash
-and 2 MB PSRAM of memory. Adafruit also added a colour 1.14 inch TFT display
-with 240x130 pixels. This makes the ESP32-S3 reverse TFT Feather the ideal
-platform  for the Ultrasonic Screwdriver because it has enough
-horsepower and and I/O to host multiple devices.  The devices that the
-Ultrasonic Screwdriver contains are as follows:
+In my design, the heart of the Ultrasonic Screwdriver is the [ESP32-S3
+reverse TFT Feather](https://www.adafruit.com/product/5691) made by
+Adafruit. The ESP32-S3 contains dual cores running at 240 MHz with 4
+MB Flash and 2 MB PSRAM of memory. Adafruit also added a colour 1.14
+inch TFT display with 240x130 pixels. This makes the ESP32-S3 reverse
+TFT Feather the ideal platform for the Ultrasonic Screwdriver because
+it has enough horsepower and I/O to host multiple devices.  The
+devices that the Ultrasonic Screwdriver contains are as follows:
 
 * **Ultrasonic** range finder which makes it possible for me to call
   my screwdriver the Ultrasonic. The ultrasonic range finder is made
@@ -61,8 +61,7 @@ slicer programs like [Ultimaker CURA](https://ultimaker.com/software/ultimaker-c
   and programmed  into the ESP32-S3.
 * **signature** contains my unique signature written in
   [Gallifreyan](https://shermansplanet.com/gallifreyan/guide.pdf).
-* **circuit** The Ultrasonic Screwdriver connection circuit drawn
-    with [Fritzing](https://fritzing.org/).
+* **circuit** The Ultrasonic Screwdriver connection circuit.
 * **instructions** contains the build guide.	
 * **pics** contains photos used for describing this repository.
 
