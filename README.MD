@@ -42,8 +42,9 @@ Ultrasonic Screwdriver contains are as follows:
   scare animals or _blow up Daleks_ :)
   
 Like many Dr Who sonic screwdrivers, the Ultrasonic Screwdriver can
-also be flicked or slid open to reveal the user screen and control
-buttons.
+also be flicked or slid open. Unlike Dr Who sonic screwdrivers that
+_psychically_ connects with the Doctor, my rendition reveals the user
+screen and control buttons after it is opened.
 
 The only shortcoming of the Ultrasonic Screwdriver is that it does not
 function as a screwdriver :)
