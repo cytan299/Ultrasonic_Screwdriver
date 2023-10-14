@@ -8,7 +8,7 @@ The schematic design of the Ultrasonic Screwdriver is copyright 2023 C.Y. Tan an
 Attribution-ShareAlike 3.0 Unported License. To view a
 copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/
 
-The copyright for the parts used in this Fritzing-like schematic is held by Adafruit. Adafruit released the Adafruit Fritzing Libary under CC Attribution Share-Alike.
+The copyright for many of the parts used in this Fritzing-like schematic is held by Adafruit. Adafruit released the Adafruit Fritzing Libary under CC Attribution Share-Alike.
 
 
 
