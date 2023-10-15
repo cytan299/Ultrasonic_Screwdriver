@@ -62,7 +62,7 @@ slicer programs like [Ultimaker CURA](https://ultimaker.com/software/ultimaker-c
 * **badge** contains my unique badge written in
   [Gallifreyan](https://shermansplanet.com/gallifreyan/guide.pdf).
 * **circuit** The Ultrasonic Screwdriver connection circuit.
-* **instructions** contains the build guide.	
+* **howto** contains the build guide.	
 * **pics** contains photos used for describing this repository.
 
 ## Movie
