@@ -3,7 +3,7 @@
 by C.Y. Tan 2023
 
 
-The Ultrasonic Screwdriver is built in the spirit of Dr Who Sonic
+The Ultrasonic Screwdriver is built in the spirit of Doctor Who Sonic
 Screwdrivers. I made this screwdriver that does actual, real
 measurements rather than simply a prop.
 
