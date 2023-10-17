@@ -14,7 +14,7 @@ master and slave is with [FreeTOS](https://docs.espressif.com/projects/esp-idf/e
 controls
     * **Menu** system and user input.
 	* **TV** IR control
-    * **Sound** of the Ultransonic Screwdriver.
+    * **Sound** of the Ultrasonic Screwdriver.
 	
 From the user selection of the menu items, it sends messages to the slave program. The
 tasks that the slave program executes are listed  below:
@@ -41,7 +41,7 @@ The following are programs that have been copied from the web and are
 copyright by their respective authors. Here are the two programs that
 are used:
 * **ring_meter.ino** by Bodmer and is released under _CC BY-NC-SA 4.0
-  Deed_ license. It is used for displaying the ultransonic range finder
+  Deed_ license. It is used for displaying the ultrasonic range finder
   results.
 * **wheel.ino** by Adafruit and is released under _LGPL-3.0_
 license. It is used for displaying the rainbow colours on the NeoPixel
