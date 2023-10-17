@@ -16,8 +16,8 @@ controls
 	* **TV** IR control
     * **Sound** of the Ultransonic Screwdriver.
 	
-From the user selection of the menu items, it send messages to the slave program. The
-tasks that the slave program executes are listed  below. 
+From the user selection of the menu items, it sends messages to the slave program. The
+tasks that the slave program executes are listed  below:
 * **slave.ino** is the slave that listens to the master program and
   executes its commands for the following devices:
     * **Torch** on/off
@@ -29,7 +29,7 @@ tasks that the slave program executes are listed  below.
 	
 The following are the support programs used by both
 _ultrasonic_screwdriver.ino_ and _slave.ino_:
-* **IR_TX.cpp** and **IR_TX.hpp** are the IR transmitter class that
+* **IR_TX.cpp** and **IR_TX.hpp** contains the IR transmitter class that
   utilizes the ESP32-S3 onboard RMT (remote control transceiver) to
   produce NEC codes for TV control. The code here is for VIZIO TVs.
   Other codes for your TV is easily found in this

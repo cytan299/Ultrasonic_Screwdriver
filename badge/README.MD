@@ -1,7 +1,7 @@
 # Badge
 
 The file
-* **badge_single_v2.svg** contains the my unique badge written in
+* **badge_single_v2.svg** contains my unique badge design written in
   [Gallifreyan](https://shermansplanet.com/gallifreyan/guide.pdf) that
   is laser cut and mounted to the front of the Ultrasonic
   Screwdriver.

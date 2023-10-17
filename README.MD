@@ -41,8 +41,8 @@ devices that the Ultrasonic Screwdriver contains are as follows:
   flashing rainbow colours and the Ultrasound Screwdriver sound to
   scare animals or _blow up Daleks_ :)
   
-Like many Dr Who sonic screwdrivers, the Ultrasonic Screwdriver can
-also be flicked or slid open. Unlike Dr Who sonic screwdrivers that
+Like many Doctor Who sonic screwdrivers, the Ultrasonic Screwdriver can
+also be flicked or slid open. Unlike Doctor Who sonic screwdrivers that
 _psychically_ connects with the Doctor, my rendition reveals the user
 screen and control buttons after it is opened.
 
@@ -63,6 +63,8 @@ slicer programs like [Ultimaker CURA](https://ultimaker.com/software/ultimaker-c
   [Gallifreyan](https://shermansplanet.com/gallifreyan/guide.pdf).
 * **circuit** The Ultrasonic Screwdriver connection circuit.
 * **howto** contains the build guide.	
+* **bom** contains the bill of materials spreadsheet that
+partially lists the parts that I had used to build the screwdriver.
 * **pics** contains photos used for describing this repository.
 
 ## Movie

@@ -1,6 +1,6 @@
 # Ultrasonic Screwdriver schematic diagram
 
-This is the schematic diagram of the Ultrasonic Screwdriver in Fritzing-like format. The bill of materials (BOM) file contains the parts that were used.
+This is the schematic diagram of the Ultrasonic Screwdriver in Fritzing-like format. The [bill of materials (BOM)](https://github.com/cytan299/Ultrasonic_Screwdriver/tree/main/bom) file contains the parts that were used.
 
 ## Copyright
 

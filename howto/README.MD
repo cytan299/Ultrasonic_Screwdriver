@@ -3,7 +3,7 @@
 I have written 
 
 * **assembly.pdf** This guide tells you how I assembled the
-  screwdriver. I think I covered most of the details.
+  screwdriver. I think I have covered most of the details.
 
 
 ## Copyright
