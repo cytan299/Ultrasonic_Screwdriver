@@ -812,7 +812,7 @@ module make_led_compartment()
   led_outershell_r = 3.1; //mm
   led_outershell_len = 9.7785; //mm
 
-  led_hole_r = 2; //mm, radius of LED hole in the cone wall
+  led_hole_r = 2; //mm, radius of LED hole in the conedist wall
   led_hole_dy = 0.5; // hole is not concentric with the outershell
 
     translate([0, O_IBox_r0 - led_outershell_r,107.9773-0]){
@@ -897,8 +897,10 @@ module make_switch_tab_hole()
   dtolx = 0.25; //mm give some tolarance to the printer error
 		 // see make_switch_bay() as well.
   dtoly = 0.2; //mm
+
+  dyshift = 0.5*0; //mm
   // make the hole for the toggle 
-  translate([22.4950-dtolx,5.6225 - dtoly/2.0,-2*IBox_len_z]){
+  translate([22.4950-dtolx,5.6225 - dtoly/2.0 - dyshift,-2*IBox_len_z]){
     cube([1.7+dtolx, 4.355 + dtoly, 4*IBox_len_z], center=false );
   }
 
@@ -1079,6 +1081,8 @@ module make_switch_bay()
   dtolx = 0.25; //mm, this is to give a tolerance to the printer error
   dtoly= 0.2; // mm
 
+  dyshift = 0.5*0;
+
   union(){
     // make the bay with the thin wall
     translate([20.565,0,Box_offset_z0+Box_wall_t]){
@@ -1087,7 +1091,7 @@ module make_switch_bay()
 	cube([4.695, 15.6, Box_len_z], center=false );
 
         // make the space for the switch      
-	translate([0.7650-dtolx,3.39 - dtoly/2.0,0]){
+	translate([0.7650-dtolx,3.39 - dtoly/2 - dyshift,0]){
 	  cube([3.93+dtolx, 8.82+dtoly, 2*IBox_len_z], center=false );
 	}
       }
@@ -1222,21 +1226,23 @@ module make_guide_wings()
   dtol = 0.0; //mm delta thickness so that the wings can slide within the guides
   wing_t = wing_thickness + dtol;
   dx = 0.5;
+  dyshift = 2.5;
   translate([-3.02,0,Box_offset_z0+Box_len_z0-wing_t/2]){
     linear_extrude(height=wing_t, center=false){
       // add in a little dx for x so that during slicing, the wing is
       // attached a lot more strongly
-      polygon(points=[[0,0],[3.02+dx,0.00],[3.020+dx, 24.4782],[0.00,19.9158]]);
+      polygon(points=[[0,0],[3.02+dx,0.00],[3.020+dx, 24.4782],[3.020, 24.4782],[0.00,19.9158 + dyshift]]);
     }
   }
 
   translate([Box_len_x,0,Box_offset_z0+Box_len_z0-wing_t/2]){  
     linear_extrude(height=wing_t, center=false){
-      polygon(points=[[0,0],[3.02,0.00],[3.020, 19.9158],[0.00,24.4782]]);		
+      polygon(points=[[0,0],[3.02,0.00],[3.020, 19.9158 + dyshift],[0.00,24.4782]]);		
     };
   }  
   
 }
+
 
 module make_top_cover()
 {
@@ -1393,7 +1399,7 @@ module make_tail_section()
     difference(){
       union(){
         // for the lower
-        make_lower_box0();
+	make_lower_box0();
         make_guide_wings();
         make_switch_bay();
         make_i2s_standoffs();	
@@ -2504,8 +2510,8 @@ Entry point
 
 
 union(){
-
   /*
+
   // make the inner tube    
   difference(){
     union(){
@@ -2513,7 +2519,7 @@ union(){
     
       //  make_lower_cover();
       //  make_ultrasound_cover();
-         make_top_cover();
+      //               make_top_cover();
     }
 
     // remove the tail section
@@ -2521,15 +2527,15 @@ union(){
   }
   */
 
-  //      make_tail_section();
+        make_tail_section();
   // make_switch_plug();
 
 
   
   // make the handle tube
-  //make_cone_parts();
-  make_upper_outer_cover();
-  make_lower_outer_cover();
+	//  make_cone_parts();
+  //make_upper_outer_cover();
+  //  make_lower_outer_cover();
 
       
   // make the end cap parts      
