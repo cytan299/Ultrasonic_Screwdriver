@@ -1,11 +1,11 @@
-# Ultrasonic Screwdriver
+# Ultrasonic Screwdriver -- An improved DIY homemade Doctor Who Sonic Screwdriver
 
 by C.Y. Tan 2023
 
 
-The Ultrasonic Screwdriver is built in the spirit of Doctor Who Sonic
+The Ultrasonic Screwdriver is an improved DIY homemade Doctor Who Sonic
 Screwdrivers. I made this screwdriver that does actual, real
-measurements rather than simply a prop.
+measurements rather than simply performing as a prop.
 
 ![Ultrasonic Scewdriver](https://github.com/cytan299/Ultrasonic_Screwdriver/blob/main//pics/ultrasonic_screwdriver.jpg)
 
