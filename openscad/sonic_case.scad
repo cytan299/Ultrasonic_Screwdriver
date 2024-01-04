@@ -5,7 +5,7 @@
     Copyright (C) 2023  C.Y. Tan
     Contact: cytan299@yahoo.com
 
-    This file is part of the CP4 and CP5 dust cover distribution.
+    This file is part of the ultrasonic screwdriver distribution.
 
     sonic_case.scad is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
