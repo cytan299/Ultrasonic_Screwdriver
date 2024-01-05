@@ -1,7 +1,7 @@
 # Laser cut parts
 
 The subdirectories
-* ** badge** contains my unique badge that is mounted on the
+* **badge** contains my unique badge that is mounted on the
   Ultrasonic screwdriver and its charging test stand.
 * **top_plate** contains my unique top plate design that is mounted at
   the top of the charging test stand.

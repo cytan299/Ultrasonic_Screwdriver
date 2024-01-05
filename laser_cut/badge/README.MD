@@ -3,8 +3,8 @@
 The file
 * **badge_single_v2.svg** contains my unique badge design written in
   [Gallifreyan](https://shermansplanet.com/gallifreyan/guide.pdf) that
-  is laser cut and mounted to the front of the Ultrasonic
-  Screwdriver.
+  is laser cut and mounted to the front of the Ultrasonic 
+  Screwdriver and the charging stand.
   
 The _badge_single_v2.svg_ can be sent to a laser cutting vendor
 like [Ponoko](https://www.ponoko.com/) for laser cutting. The material that I had used is 1.5 mm thick
