@@ -16,12 +16,11 @@ program.
 
 ## Upgrade to v2
 
-In v1, the Ultrasonic Screwdriver is charged by insertion into the
-Charging Stand without unscrewing its base to reveal a charging
-plug. The plug is then attached to the Charging Stand's socket for
-charging. In the upgraded version 2, the Ultrasonic Screwdriver can be
-charged by inserting it into the Charging Stand. This upgrade will
-require the following new STL files:
+In v1, the Ultrasonic Screwdriver is charged by unscrewing its base to
+reveal a charging plug. The plug is then attached to the Charging
+Stand's socket for charging. In the upgraded version 2, the Ultrasonic
+Screwdriver can be charged by inserting it into the Charging
+Stand. This upgrade will require the following new STL files:
 
 * **slip_adapter_v2.stl** The slip adapter that has space for the spring
   connector and the alignment recesses.

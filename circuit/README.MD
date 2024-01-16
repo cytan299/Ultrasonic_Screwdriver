@@ -13,7 +13,7 @@ plug is then attached to the Charging Stand's socket for charging.  In
 the upgraded version 2, the Ultrasonic Screwdriver can be charged by
 inserting it into the Charging Stand.
 
-The diagrams contain both the v1 and v2 circuits.
+These diagrams contain both the v1 and v2 circuits.
 
 ## Copyright
 
