@@ -53,10 +53,10 @@ And for completeness, I have also made a Charging Stand for the
 Ultrasonic Screwdriver. It's a nice stand for the Ultrasonic
 Screwdriver to rest and recharge.
 
-Note: As of Jan 2024, there is an upgrade to version 2 of the charging
-circuit which allows the Ultrasonic Screwdriver to be charged by
-simply inserting it into the Charging Stand. All relevant files have
-been updated to include this upgrade.
+Note: As of Jan 2024, the charging circuit has been upgraded to v2
+which allows the Ultrasonic Screwdriver to be charged by simply
+inserting it into the Charging Stand. All relevant files have been
+updated to include this upgrade.
 
 ## Directory structure
 
