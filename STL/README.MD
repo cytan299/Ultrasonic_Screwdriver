@@ -1,4 +1,4 @@
-# Laser cut parts
+# Parts for 3D printer
 
 The subdirectories
 * **sonic_case** contains the STL files that form the outer shell of

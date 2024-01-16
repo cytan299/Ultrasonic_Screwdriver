@@ -1,6 +1,6 @@
 # Ultrasonic Screwdriver -- An improved DIY homemade Doctor Who Sonic Screwdriver
 
-by C.Y. Tan 2023
+by C.Y. Tan 2023 and 2024
 
 
 The Ultrasonic Screwdriver is an improved DIY homemade Doctor Who Sonic
@@ -49,9 +49,14 @@ screen and control buttons after it is opened.
 The only shortcoming of the Ultrasonic Screwdriver is that it does not
 function as a screwdriver :)
 
-And for completeness, I have also made a charging stand for the
+And for completeness, I have also made a Charging Stand for the
 Ultrasonic Screwdriver. It's a nice stand for the Ultrasonic
 Screwdriver to rest and recharge.
+
+Note: As of Jan 2024, there is an upgrade to version 2 of the charging
+circuit which allows the Ultrasonic Screwdriver to be charged by
+simply inserting it into the Charging Stand. All relevant files have
+been updated to include this upgrade.
 
 ## Directory structure
 

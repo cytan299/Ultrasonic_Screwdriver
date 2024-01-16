@@ -5,7 +5,7 @@
     Copyright (C) 2023  C.Y. Tan
     Contact: cytan299@yahoo.com
 
-    This file is part of the ultrasonic screwdriver distribution.
+    This file is part of the CP4 and CP5 dust cover distribution.
 
     sonic_case.scad is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -211,6 +211,8 @@ battery_wall_t = Box_wall_t; //mm
 
 battery_tilt_angle = 12.8835; // deg. rotation angle for battery compartment
 
+
+
 /****
   Cone definitions
 *****/
@@ -242,6 +244,32 @@ endcap_pos_z = 5;
 
 Tail_total_len_y = 30.7558;  // mm, totail length  of the tail including tab
 Tail_tab_len = 6.2776; // mm
+
+
+/*****
+  alignment parts
+****/      
+
+alignment_screw_r = 0.75;
+alignment_screw_x = 0;
+alignment_screw_y = 11.1087;
+
+// the round hole
+alignment_hole_y = -7.0003;
+alignment_cylinder_h = endcap_slip_h+Box_wall_t;
+
+slip_power_hole_r = 7.998/2.0; //mm
+alignment_peg_r = 3.5/2.0; //mm
+spring_connect_z_offset = 1.5012;
+
+alignment_rect_y = 6.4674;
+alignment_rect_w0 = alignment_peg_r;
+alignment_rect_l0 = 5.3578;
+
+alignment_rect_w1 = 2.3743;
+alignment_rect_l1 = alignment_rect_l0 + 2*alignment_peg_r;
+
+
 
 
 module make_lower_box0()
@@ -2371,6 +2399,8 @@ module make_slip_bracket()
   }  
 }
 
+
+
 module make_slip_power_hooks()
 {
   hook_outer_r = 7;
@@ -2456,6 +2486,194 @@ module make_slip_adapter()
   }  
 }
 
+
+module make_alignment_cylinder()
+{
+  dtol = 0.2;
+  dtolr= 0.2;
+
+
+  difference(){
+    cylinder(r=(endcap_slip_hole_r - dtolr), h=alignment_cylinder_h, center=false);
+    union(){
+      // make screws holes for the spring connector
+      translate([6.9987,0,0]){
+        cylinder(r=3/2, h=10*Box_wall_t , center=true);
+      }
+      translate([-6.9987,0,0]){
+        cylinder(r=3/2, h=10*Box_wall_t , center=true);
+      }
+
+      // make hole for the power plug
+      cylinder(r=slip_power_hole_r, h=10*Box_wall_t , center=true);
+
+      dtol = 1;
+      // make rectangle space for spring connector
+      translate([0,0,alignment_cylinder_h/2 -spring_connect_z_offset ]){
+        cube([22.5607+dtol, 8.1862+dtol, alignment_cylinder_h], center = true);
+      }
+
+      // make the round align hole
+   
+      translate([0,alignment_hole_y+alignment_peg_r, -spring_connect_z_offset]){
+        cube([2*alignment_peg_r, 2*alignment_peg_r, alignment_cylinder_h*2], center=true);
+      }      
+      translate([0,alignment_hole_y, -spring_connect_z_offset ]){
+        cylinder(r= alignment_peg_r, h = alignment_cylinder_h*2 , center = true);
+      }
+
+      // make the "rectangle" alignment hole
+
+      // make 2 cubes to cut out
+      translate([0,alignment_rect_y, -spring_connect_z_offset]){
+        cube([alignment_rect_l0, 2*alignment_rect_w0, alignment_cylinder_h*2], center=true);
+      }
+
+      translate([0,4.0931, -spring_connect_z_offset]){
+        cube([alignment_rect_l1, 2*alignment_rect_w1, alignment_cylinder_h*2], center=true);
+      }                  
+
+      // round parts of the "rectangle" alignment hole
+      translate([-2.6789,alignment_rect_y, -spring_connect_z_offset ]){
+        cylinder(r= alignment_peg_r, h = alignment_cylinder_h*2 , center = true);
+      }
+      translate([2.6789,alignment_rect_y, -spring_connect_z_offset ]){
+        cylinder(r= alignment_peg_r, h = alignment_cylinder_h*2 , center = true);
+      }
+
+      //screw holes
+      translate([alignment_screw_x, alignment_screw_y, 0]){
+	cylinder(r = alignment_screw_r, h = 20, center = true);
+      }
+
+      translate([alignment_screw_x, -alignment_screw_y, 0]){
+	cylinder(r = alignment_screw_r, h = 20, center = true);
+      }
+    }
+  }
+}
+
+module make_slip_adapter_v2()
+{
+  dtol = 0.2;
+  dtolr= 0.2;
+
+  alignment_cylinder_h = endcap_slip_h+Box_wall_t;  
+  translate([0,0,-Box_wall_t]){
+    union(){
+
+      difference(){
+	cylinder(r=endcap_slip_r, h=Box_wall_t - dtol, center=false);
+	union(){
+	  
+          // make hole for the power plug
+          cylinder(r=slip_power_hole_r, h=4*Box_wall_t , center=true);
+
+	  // make screws holes for the spring connector
+	  translate([6.9987,0,0]){
+	    cylinder(r=3/2, h=4*Box_wall_t , center=true);
+	  }
+
+	  translate([-6.9987,0,0]){
+	    cylinder(r=3/2, h=4*Box_wall_t , center=true);
+	  }	  
+	}
+      }
+
+
+      // make the alignment cylinder
+      translate([0,0, -alignment_cylinder_h]){      
+        make_alignment_cylinder();
+      }
+
+      // make bracket for securing the circuit board
+      make_slip_bracket();
+
+      // make the skirt
+      make_slip_skirt();
+
+    }
+  }  
+}
+
+module make_slip_cap_v2()
+{
+  dtol = 0.2;
+  dtolr= 0.2;
+
+
+  slip_cap_t = 3.1496; //2.35;
+  slip_cap_offset_z =slip_cap_t + Box_wall_t + (endcap_slip_h+Box_wall_t) + 0;
+
+  
+  translate([0,0, -slip_cap_offset_z - 10]){
+    difference(){
+      union(){
+      cylinder(r=(endcap_slip_hole_r - dtolr),h = slip_cap_t , center=false);
+
+
+      }
+
+      union(){
+
+	// make the cound alignment hole
+        translate([0,alignment_hole_y+alignment_peg_r, -spring_connect_z_offset]){
+          cube([2*alignment_peg_r, 2*alignment_peg_r, alignment_cylinder_h*2], center=true);
+        }      
+        translate([0,alignment_hole_y, -spring_connect_z_offset ]){
+          cylinder(r= alignment_peg_r, h = alignment_cylinder_h*2 , center = true);
+        }
+
+
+        // make the "rectangle" alignment hole
+
+        // make 2 cubes to cut out
+        translate([0,alignment_rect_y, -spring_connect_z_offset]){
+          cube([alignment_rect_l0, 2*alignment_rect_w0, alignment_cylinder_h*2], center=true);
+	}
+
+	translate([0,4.0931, -spring_connect_z_offset]){
+	  cube([alignment_rect_l1, 2*alignment_rect_w1, alignment_cylinder_h*2], center=true);
+	}                  
+
+        // round parts of the "rectangle" alignment hole
+        translate([-2.6789,alignment_rect_y, -spring_connect_z_offset ]){
+	  cylinder(r= alignment_peg_r, h = alignment_cylinder_h*2 , center = true);
+	}
+	translate([2.6789,alignment_rect_y, -spring_connect_z_offset ]){
+	  cylinder(r= alignment_peg_r, h = alignment_cylinder_h*2 , center = true);
+	}
+
+	// make the slot for the spring connectors
+      	cube([alignment_rect_l1, 2*4.0005, alignment_cylinder_h*2], center = true);
+
+	// screw hole chamfers
+	screw_hole_depth_t = slip_cap_t/2;
+	screw_hole_depth_r = 3.5/2;
+        translate([alignment_screw_x, alignment_screw_y, -slip_cap_t + screw_hole_depth_t]){
+	  cylinder(r = screw_hole_depth_r, h = 2*screw_hole_depth_t, center = false);
+        }
+
+        translate([alignment_screw_x, -alignment_screw_y, -slip_cap_t + screw_hole_depth_t]){
+	  cylinder(r = screw_hole_depth_r, h = 2*screw_hole_depth_t, center = false);
+        }	      
+	
+
+	// screw holes
+        translate([alignment_screw_x, alignment_screw_y, 0]){
+	  cylinder(r = alignment_screw_r, h = 20, center = true);
+        }
+
+        translate([alignment_screw_x, -alignment_screw_y, 0]){
+	  cylinder(r = alignment_screw_r, h = 20, center = true);
+        }	
+
+      }
+    }
+  }
+  
+}
+
 module make_slip_cap()
 {
   screw_pitch = 1; // pitch of the screw
@@ -2527,21 +2745,26 @@ union(){
   }
   */
 
-        make_tail_section();
+  //   make_tail_section();
   // make_switch_plug();
 
 
   
   // make the handle tube
 	//  make_cone_parts();
-  //make_upper_outer_cover();
-  //  make_lower_outer_cover();
+  //  make_upper_outer_cover();
+  //    make_lower_outer_cover();
 
       
   // make the end cap parts      
-  //make_endcap();
-  //  make_slip_adapter();
-  //  make_slip_cap();
+  //   make_endcap();
+  // make_slip_adapter();
+  //    make_slip_cap();
+  
+  //     make_slip_adapter_v2();
+      make_slip_cap_v2();  
+      
+
 
   // make the speaker holder
   //    make_speaker_holder();

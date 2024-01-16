@@ -11,7 +11,22 @@ CURA](https://ultimaker.com/software/ultimaker-cura/) for 3D printing.
 It is interesting that the best setting that I have found for the infill is
 zigzag and not cubic. I wanted a strong shell and so I had to set the
 fill fraction to be 50%. You should check that zigzag and 50% fill
-works for you by examining the generated cross sections in your slicer program.
+works for you by examining the generated cross sections in your slicer
+program.
+
+## Upgrade to v2
+
+In v1, the Ultrasonic Screwdriver is charged by insertion into the
+Charging Stand without unscrewing its base to reveal a charging
+plug. The plug is then attached to the Charging Stand's socket for
+charging. In the upgraded version 2, the Ultrasonic Screwdriver can be
+charged by inserting it into the Charging Stand. This upgrade will
+require the following new STL files:
+
+* **slip_adapter_v2.stl** The slip adapter that has space for the spring
+  connector and the alignment recesses.
+* **slip_cap_v2.stl** The slip cap that covers the bottom of the _slip
+adapter v2_.
 
 ## Copyright
 

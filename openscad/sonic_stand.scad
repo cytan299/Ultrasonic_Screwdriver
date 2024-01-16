@@ -5,7 +5,7 @@
     Copyright (C) 2023  C.Y. Tan
     Contact: cytan299@yahoo.com
 
-    This file is part of the ultrasonic screwdriver distribution.
+    This file is part of the CP4 and CP5 dust cover distribution.
 
     sonic_stand.scad is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -413,7 +413,7 @@ module make_cover()
       }
 
       make_cover_friction_island();
-      make_cover_alignment_island();
+  //    make_cover_alignment_island();
 
       x=pcb_mount_radial_pos;
       y=x;
@@ -426,7 +426,7 @@ module make_cover()
     union(){
       make_cover_screw_holes();
       make_cover_indent();
-      make_powerin_indent();
+//      make_powerin_indent();
     }
   }
 }
@@ -526,6 +526,183 @@ module make_top_plate_with_laser_plate()
   }  
 }
 
+module make_alignment_stand_bottom()
+{
+
+
+  stand_bottom_w = 7.7;
+  stand_bottom_l = 39.4;
+  stand_bottom_z = 2.1;
+
+  rise_w = 7.7;
+  rise_l = 25.8;
+  rise_z = 6.8512;
+
+  union(){
+    difference(){
+      union(){
+        translate([9.8,-stand_bottom_l/2,0]){
+          cube([stand_bottom_w, stand_bottom_l, stand_bottom_z ], center = false);
+	}
+
+	translate([9.8,-rise_l/2,0]){
+          cube([rise_w, rise_l, rise_z ], center = false);
+	}
+
+        translate([-17.5,-stand_bottom_l/2,0]){
+          cube([stand_bottom_w, stand_bottom_l, stand_bottom_z ], center = false);
+	}
+
+	translate([-17.5,-rise_l/2,0]){
+          cube([rise_w, rise_l, rise_z ], center = false);
+	}
+
+
+
+      }
+
+      union(){
+
+	// make the BOTTOM gap to accommodate the usb connector and the jst connectors
+	gap_w = 23; //rise_l - 2*wall_t + 1;	
+	gap_h = rise_z + stand_bottom_z - 2*wall_t;
+	
+	cube([40, gap_w, 4*gap_h], center=true);	
+
+        x=pcb_mount_radial_pos;
+        y=x;
+        translate([x,y,0]){
+          cylinder(h=32, r=1.5*pcb_mount_screw_r, center=true);
+        }
+        translate([x,-y,0]){
+	  cylinder(h=32, r=1.5*pcb_mount_screw_r, center=true);;
+	}
+
+        translate([-x,-y,0]){
+	  cylinder(h=32, r=1.5*pcb_mount_screw_r, center=true);;
+	}
+
+        translate([-x,y,0]){
+	  cylinder(h=32, r=1.5*pcb_mount_screw_r, center=true);;
+	} 	
+      }
+    }
+  }  
+}
+
+module make_alignment_platform()
+{
+  platform_offset_z = 4.8512;
+
+  bottom_l = 35; //28.3;
+  bottom_w = 25.8;
+  bottom_z = 2.0;
+
+  top_l = 35;
+  top_w = bottom_w;
+  top_z = 1.2012;
+  top_offset_z = 5.65;
+
+  difference(){
+    union(){
+      translate([-bottom_l/2,-bottom_w/2,  platform_offset_z]){
+        // bottom part
+        cube([bottom_l, bottom_w,bottom_z], center=false);
+      }
+
+    }
+
+    // accommodate JST connectors connector
+    jst_l = 8;
+    jst_w = 23;
+    translate([-18.3763,0,0]){
+      cube([2*jst_l, jst_w, 4*top_offset_z], center = true);;
+    }    
+
+    // make holes for the spring connector
+    union(){
+      connector_mount_hole_r = 1.5;
+      
+      translate([0,6.9987,5]){
+	cylinder(r=connector_mount_hole_r, h=10, center=true);
+      }
+
+      translate([0,-6.9987,5]){
+	cylinder(r=connector_mount_hole_r, h=10, center=true);
+      }      
+    }
+
+    connector_main_hole_r = 7.998/2;
+
+    // make hole for the gold plated connectors
+    cylinder(r=connector_main_hole_r, h=20, center=true);    
+  }
+
+}
+
+module make_alignment_pegs()
+{
+  dtol = 0.5;
+  bottom_r = 9.8;
+  bottom_h = 6.9088;
+  peg_z_offset = 6.8512;
+
+  dw = 0+.25;
+  spring_slot_w = 8.1862+dw;
+
+  translate([0,0, peg_z_offset]){
+    union(){
+      difference(){
+        cylinder(r=bottom_r, h = bottom_h, center=false);
+        //make slot for the spring connector
+        cube([spring_slot_w, 4* bottom_r,  4*bottom_h], center = true);
+      }
+
+      peg_z_offset = 6.9088;      
+      // round peg
+      round_peg_x = -7.0002;
+      round_peg_r = 1.5;
+      round_peg_z = 6;
+      
+      translate([round_peg_x, 0, peg_z_offset]){
+	cylinder(r=round_peg_r, h = round_peg_z, center=false);
+      }
+
+      // "rectangle" peg
+      union(){
+	x=6.4674;
+	y=2.1039;
+	translate([x,y, peg_z_offset]){
+	  cylinder(r=round_peg_r, h = round_peg_z, center=false);
+	}
+
+	translate([x,-y, peg_z_offset]){
+	  cylinder(r=round_peg_r, h = round_peg_z, center=false);
+	}
+
+	rect_peg_l = 5.3578;
+	translate([x-round_peg_r,-rect_peg_l/2,peg_z_offset]){
+	  cube([2*round_peg_r, rect_peg_l, round_peg_z], center=false);
+	}
+      }
+    }
+  }
+}
+
+module make_alignment_stand()
+{
+
+  alignment_stand_z = 13.65;
+
+  translate([0,0, alignment_stand_z]){	    
+    union(){
+      make_alignment_stand_bottom();
+      make_alignment_platform();
+      make_alignment_pegs();
+    }
+  }
+}
+
 /*************
 
 Entry point
@@ -534,12 +711,14 @@ Entry point
 
 
 union(){
-  make_top();
-  make_cover();
+  //    make_top();
+  //  make_cover();
 
-  make_top_plate();
+  make_alignment_stand();
 
-  make_top_plate_with_laser_plate();
+//  make_top_plate();
+
+//  make_top_plate_with_laser_plate();
 	      
 	      
 }

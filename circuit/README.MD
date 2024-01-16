@@ -1,6 +1,19 @@
 # Ultrasonic Screwdriver schematic diagram
 
-This is the schematic diagrams of the Ultrasonic Screwdriver and charging circuit in Fritzing-like format. The [bill of materials (BOM)](https://github.com/cytan299/Ultrasonic_Screwdriver/tree/main/bom) file contains the parts that were used.
+This is the schematic diagrams of the Ultrasonic Screwdriver and
+charging circuit in Fritzing-like format. The [bill of materials
+(BOM)](https://github.com/cytan299/Ultrasonic_Screwdriver/tree/main/bom)
+file contains the parts that were used.
+
+## Upgrade to v2
+
+In v1, it is very clumsy to charge the Ultrasonic Screwdriver because
+the bottom cover has to be unscrewed to reveal a charging plug. The
+plug is then attached to the Charging Stand's socket for charging.  In
+the upgraded version 2, the Ultrasonic Screwdriver can be charged by
+inserting it into the Charging Stand.
+
+The diagrams contain both the v1 and v2 circuits.
 
 ## Copyright
 
