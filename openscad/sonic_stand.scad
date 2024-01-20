@@ -658,31 +658,43 @@ module make_alignment_pegs()
         cube([spring_slot_w, 4* bottom_r,  4*bottom_h], center = true);
       }
 
+      // horizontal rectangle peg
       peg_z_offset = 6.9088;      
-      // round peg
-      round_peg_x = -7.0002;
+      // round part of the peg
+      round_peg_x = 7.0002;
       round_peg_r = 1.5;
       round_peg_z = 6;
-      
-      translate([round_peg_x, 0, peg_z_offset]){
-	cylinder(r=round_peg_r, h = round_peg_z, center=false);
+
+      dz = 1;
+
+
+      translate([-round_peg_x, 0, peg_z_offset -dz]){;
+	cylinder(r=round_peg_r, h = round_peg_z+dz, center=false);
       }
+
+      translate([-round_peg_x,-round_peg_r, peg_z_offset-dz]){
+        cube([bottom_r-round_peg_x, 2*round_peg_r, round_peg_z + dz], center=false);
+      }
+
+
+
+
 
       // "rectangle" peg
       union(){
 	x=6.4674;
 	y=2.1039;
-	translate([x,y, peg_z_offset]){
-	  cylinder(r=round_peg_r, h = round_peg_z, center=false);
+	translate([x,y, peg_z_offset-dz]){
+	  cylinder(r=round_peg_r, h = round_peg_z+dz, center=false);
 	}
 
-	translate([x,-y, peg_z_offset]){
-	  cylinder(r=round_peg_r, h = round_peg_z, center=false);
+	translate([x,-y, peg_z_offset-dz]){
+	  cylinder(r=round_peg_r, h = round_peg_z+dz, center=false);
 	}
 
 	rect_peg_l = 5.3578;
-	translate([x-round_peg_r,-rect_peg_l/2,peg_z_offset]){
-	  cube([2*round_peg_r, rect_peg_l, round_peg_z], center=false);
+	translate([x-round_peg_r,-rect_peg_l/2,peg_z_offset-dz]){
+	  cube([2*round_peg_r, rect_peg_l, round_peg_z+dz], center=false);
 	}
       }
     }
